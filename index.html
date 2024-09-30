@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 2 - HTML Basic Tag</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #2d2d2d; /* Warna industrial */
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #f4c542;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 5px solid #f4c542;
+        }
+        h1, h2 {
+            color: #f4c542;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .content {
+            background-color: #3e3e3e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        a {
+            color: #f4c542;
+            text-decoration: none;
+            border-bottom: 2px solid #f4c542;
+        }
+        a:hover {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #1a1a1a;
+            color: #888;
+            border-top: 3px solid #f4c542;
+        }
+		.dot-before::before {
+            content: "• "; /* Simbol titik */
+            color: #f4c542; /* Warna titik */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        HTML (Hyper Text Markup Language)
+    </header>
+    
+    <div class="content">
+        <h1>Pengenalan HTML</h1>
+        <ul>
+		<p class="dot-before">HTML (Hypertext Markup Language) adalah sebuah bahasa markup yang digunakan untuk membuat halaman web dan menampilkan berbagai informasi di dalam browser.</p>
+		<p class="dot-before">HTML berupa kode - kode tag yang menginstruksikan browser untuk menghasilkan tampilan sesuai dengan yang diinginkan.</p>
+        <p class="dot-before">HTML saat ini merupakan standar Internet yang didefinisikan dan dikendalikan penggunaannya oleh World Wide Web Consortium(W3C).</p>
+		</ul>
+		
+        <h2>Sejarah HTML</h2>
+        <ul>
+		<p class="dot-before">HTML 2.0 (RFC1866) disetujui sebagai standard pada 22 September 1995</p>
+        <p class="dot-before">HTML 3.2 14 Januari 1996</p>
+		<p class="dot-before">HTML 4.0 18 Desember 1997</p>
+		<p class="dot-before">ISO/IEC 15445:2000 “ISO HTML” berdasar pada HTML 4.01 Strict 15 Mei 2000</p>
+		<p class="dot-before">XHTML 1.0 → gabungan HTML & XML 24 Januari 2000</p>
+		<p class="dot-before">XHTML 1.1 16 February 2007</p>
+		</ul>
+		
+		<h2>Ciri- ciri Dokumen HTML</h2>
+		<ul>
+		<p class="dot-before">Ekstensi file berupa .htm atau .html</p>
+		<p class="dot-before">Non case sensitive.</p>
+		<p class="dot-before">Terdiri atas tag - tag pembuka dan penutup (walaupun ada beberapa tagyang tidak memiliki penutup).</p>
+		<p class="dot-before">Tag - tag saling berpasangan & bersarang.</p>
+		</ul>
+		
+        <h2>Struktur HTML</h2>
+        <ul>
+		<p>Dokumen HTML terdiri dari <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, dan <code>&lt;body&gt;</code>. Di dalam <code>&lt;body&gt;</code>, kita menuliskan konten yang akan ditampilkan di browser. Contoh struktur standar dokumen HTML:</p>
+		<ul>
+           <code>&lt;html&gt;</code><br/>
+            <ul><code>&lt;head&gt;</code><br/>
+			<ul><code>&lt;title&gt;</code>Judul Halaman<code>&lt;/title&gt;</code></ul>
+			<code>&lt;/head&gt;</code><br/>
+            <code>&lt;body&gt;</code><br/>
+			<ul><code>&lt;p&gt;</code>Hello World!!<code>&lt;/p&gt;</code></ul>
+			<code>&lt;/body&gt;</code></ul>
+			<code>&lt;/html&gt;</code>
+        </ul>
+		</ul>
+		
+        <h2>Document Header</h2>
+		<ul> <p class="dot-before">Page Title (<code>&lt;title&gt;</code> <code>&lt;/title&gt;</code>): Judul dari halaman web</p>
+		<p class="dot-before">Scripting (<code>&lt;sript&gt;</code> <code>&lt;/script&gt;</code>): Tempat client-side script disertakan (javacript,vbscript,jscript)</p>
+		<p class="dot-before">Style (<code>&lt;style&gt;</code> <code>&lt;/style&gt;</code>): Dipergunakan untuk mengatur bagaimana sebuah halaman web dengan berbagai komponennya hendak ditampilkan ke dalam browser</p>
+		<p class="dot-before">Meta (<code>&lt;meta&gt;</code> <code>&lt;/meta&gt;</code>): Meta tags, descriptions & keywords untuk mempermudah search engine dalam melakukan indexing</p>
+		<p> Contoh Dokumen Header</p>
+			<ul>
+				<code>&lt;html&gt;</code><br/>
+					<ul><code>&lt;head&gt;</code><br/>
+						<ul>
+							<code>&lt;meta http-equiv="content-type" content="text/html; charset=utf-8"/&gt;</code>
+							<code>&lt;title&gt;</code>Judul Halaman<code>&lt;/title&gt;</code><br/>
+							<code>&lt;style type="text/css"&gt;</code>
+							<ul><code>@import url("css/index_properties.css");</code></ul>
+							<code>&lt;/style&gt;</code><br/>
+							<code>&lt;script src="SpryAssets/SpryMenuBar.js" type="text/javasrcipt"&gt;</code><code>&lt;/script&gt;</code>
+						</ul>
+					<code>&lt;/head&gt;</code><br/>
+					<code>&lt;body&gt;</code><br/>
+						<ul><code>&lt;p&gt;</code><font color=green>Hello World!!</font><code>&lt;/p&gt;</code></ul>
+						<code>&lt;/body&gt;</code></ul>
+				<code>&lt;/html&gt;</code>
+			</ul>
+		</ul>
+		
+		
+		<h2>Tag-Tag HTML</h2>
+        <p>Beberapa tag yang sering digunakan di HTML antara lain:</p>
+        <ul>
+            <li><code>&lt;p&gt;</code> untuk paragraf.</li>
+            <li><code>&lt;img&gt;</code> untuk menyisipkan gambar.</li>
+            <li><code>&lt;a&gt;</code> untuk hyperlink.</li>
+        </ul>
+
+        <p>Untuk lebih lanjut, lihat <a href="#detail">dokumentasi lengkapnya</a>.</p>
+    </div>
+
+    <footer>
+        &copy; 2024 Pemrograman Web 1 - Universitas Tadulako
+    </footer>
+</body>
+</html>
